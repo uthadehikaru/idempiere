@@ -116,8 +116,8 @@ INSERT INTO AD_SysConfig (AD_SysConfig_ID,AD_Client_ID,AD_Org_ID,Created,Updated
 ;
 
 -- May 2, 2018 3:45:09 PM CEST
-INSERT INTO AD_SysConfig (AD_SysConfig_ID,AD_Client_ID,AD_Org_ID,Created,Updated,CreatedBy,UpdatedBy,IsActive,Name,Value,Description,EntityType,ConfigurationLevel,AD_SysConfig_UU) VALUES (200137,0,0,TO_TIMESTAMP('2018-05-02 15:45:08','YYYY-MM-DD HH24:MI:SS'),TO_TIMESTAMP('2018-05-02 15:45:08','YYYY-MM-DD HH24:MI:SS'),100,100,'Y','ZK_SESSION_TIMEOUT_IN_SECONDS','-2','ZK session timeout.  -2 meaning not set','D','O','0599feeb-845f-4ccb-a740-94ad04c85d64')
-;
+--INSERT INTO AD_SysConfig (AD_SysConfig_ID,AD_Client_ID,AD_Org_ID,Created,Updated,CreatedBy,UpdatedBy,IsActive,Name,Value,Description,EntityType,ConfigurationLevel,AD_SysConfig_UU) VALUES (200137,0,0,TO_TIMESTAMP('2018-05-02 15:45:08','YYYY-MM-DD HH24:MI:SS'),TO_TIMESTAMP('2018-05-02 15:45:08','YYYY-MM-DD HH24:MI:SS'),100,100,'Y','ZK_SESSION_TIMEOUT_IN_SECONDS','-2','ZK session timeout.  -2 meaning not set','D','O','0599feeb-845f-4ccb-a740-94ad04c85d64')
+--;
 
 -- May 2, 2018 8:34:38 PM CEST
 UPDATE AD_SysConfig SET Name='JASPER_SWAP_MAX_PAGES',Updated=TO_TIMESTAMP('2018-05-02 20:34:38','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_SysConfig_ID=200011

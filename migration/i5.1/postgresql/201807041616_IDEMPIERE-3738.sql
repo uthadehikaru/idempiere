@@ -1,10 +1,9 @@
 -- IDEMPIERE-3738 Reference Color broken
 -- Jul 4, 2018 4:02:49 PM CEST
-INSERT INTO AD_Element (AD_Element_ID,AD_Client_ID,AD_Org_ID,IsActive,Created,CreatedBy,Updated,UpdatedBy,ColumnName,Name,Description,Help,PrintName,EntityType,AD_Element_UU) VALUES (203229,0,0,'Y',TO_TIMESTAMP('2018-07-04 16:02:37','YYYY-MM-DD HH24:MI:SS'),100,TO_TIMESTAMP('2018-07-04 16:02:37','YYYY-MM-DD HH24:MI:SS'),100,'Color','Color',NULL,NULL,'Color','D','c43cfcc2-2c92-4e91-88b8-88947297184d')
-;
+--INSERT INTO AD_Element (AD_Element_ID,AD_Client_ID,AD_Org_ID,IsActive,Created,CreatedBy,Updated,UpdatedBy,ColumnName,Name,Description,Help,PrintName,EntityType,AD_Element_UU) VALUES (203229,0,0,'Y',TO_TIMESTAMP('2018-07-04 16:02:37','YYYY-MM-DD HH24:MI:SS'),100,TO_TIMESTAMP('2018-07-04 16:02:37','YYYY-MM-DD HH24:MI:SS'),100,'Color','Color',NULL,NULL,'Color','D','c43cfcc2-2c92-4e91-88b8-88947297184d');
 
 -- Jul 4, 2018 4:03:02 PM CEST
-INSERT INTO AD_Column (AD_Column_ID,Version,Name,AD_Table_ID,ColumnName,FieldLength,IsKey,IsParent,IsMandatory,IsTranslated,IsIdentifier,SeqNo,IsEncrypted,AD_Reference_ID,AD_Client_ID,AD_Org_ID,IsActive,Created,CreatedBy,Updated,UpdatedBy,AD_Element_ID,IsUpdateable,IsSelectionColumn,EntityType,IsSyncDatabase,IsAlwaysUpdateable,IsAutocomplete,IsAllowLogging,AD_Column_UU,IsAllowCopy,SeqNoSelection,IsToolbarButton,IsSecure) VALUES (213570,0,'Color',135,'Color',7,'N','N','N','N','N',0,'N',27,0,0,'Y',TO_TIMESTAMP('2018-07-04 16:03:02','YYYY-MM-DD HH24:MI:SS'),100,TO_TIMESTAMP('2018-07-04 16:03:02','YYYY-MM-DD HH24:MI:SS'),100,203229,'Y','N','D','N','N','N','Y','46472ac6-1648-48d8-b0bd-aef0d61a447f','Y',0,'N','N')
+INSERT INTO AD_Column (AD_Column_ID,Version,Name,AD_Table_ID,ColumnName,FieldLength,IsKey,IsParent,IsMandatory,IsTranslated,IsIdentifier,SeqNo,IsEncrypted,AD_Reference_ID,AD_Client_ID,AD_Org_ID,IsActive,Created,CreatedBy,Updated,UpdatedBy,AD_Element_ID,IsUpdateable,IsSelectionColumn,EntityType,IsSyncDatabase,IsAlwaysUpdateable,IsAutocomplete,IsAllowLogging,AD_Column_UU,IsAllowCopy,SeqNoSelection,IsToolbarButton,IsSecure) VALUES (213570,0,'Color',135,'Color',7,'N','N','N','N','N',0,'N',27,0,0,'Y',TO_TIMESTAMP('2018-07-04 16:03:02','YYYY-MM-DD HH24:MI:SS'),100,TO_TIMESTAMP('2018-07-04 16:03:02','YYYY-MM-DD HH24:MI:SS'),100,1000837,'Y','N','D','N','N','N','Y','46472ac6-1648-48d8-b0bd-aef0d61a447f','Y',0,'N','N')
 ;
 
 -- Jul 4, 2018 4:03:03 PM CEST

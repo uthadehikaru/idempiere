@@ -16,8 +16,7 @@ DROP INDEX c_conversionrate_once
 ;
 
 -- Dec 25, 2018, 8:56:20 PM CET
-CREATE UNIQUE INDEX c_conversionrate_once ON C_Conversion_Rate (AD_Client_ID,AD_Org_ID,C_Currency_ID,C_Currency_ID_To,C_ConversionType_ID,ValidFrom)
-;
+--CREATE UNIQUE INDEX c_conversionrate_once ON C_Conversion_Rate (AD_Client_ID,AD_Org_ID,C_Currency_ID,C_Currency_ID_To,C_ConversionType_ID,ValidFrom);
 
 -- Dec 25, 2018, 9:34:13 PM CET
 UPDATE AD_Column SET IsUpdateable='N',Updated=TO_TIMESTAMP('2018-12-25 21:34:13','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Column_ID=10294

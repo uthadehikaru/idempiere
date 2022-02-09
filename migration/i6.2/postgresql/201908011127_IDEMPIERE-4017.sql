@@ -12,6 +12,7 @@ DROP INDEX ad_table_name
 ;
 
 -- Aug 1, 2019, 10:58:35 AM CEST
+update ad_table set tablename='kst_production_old' where ad_table_id=1000159;
 CREATE UNIQUE INDEX ad_table_name ON AD_Table (UPPER(TableName))
 ;
 
@@ -40,6 +41,8 @@ DROP INDEX ad_column_name
 ;
 
 -- Aug 1, 2019, 11:59:04 AM CEST
+-- delete from ad_field where ad_column_id=1099220;
+-- update ad_column set columnname='sustainablematerialcomp' where ad_column_id=1099220;
 CREATE UNIQUE INDEX ad_column_name ON AD_Column (AD_Table_ID,UPPER(ColumnName))
 ;
 
@@ -52,8 +55,7 @@ INSERT INTO AD_IndexColumn (AD_Client_ID,AD_Org_ID,AD_IndexColumn_ID,AD_IndexCol
 ;
 
 -- Aug 1, 2019, 12:00:44 PM CEST
-CREATE UNIQUE INDEX ad_column_fkconstraintname ON AD_Column (UPPER(FKConstraintName))
-;
+--CREATE UNIQUE INDEX ad_column_fkconstraintname ON AD_Column (UPPER(FKConstraintName));
 
 -- Aug 1, 2019, 12:32:28 PM CEST
 UPDATE AD_Tab SET IsSingleRow='Y',Updated=TO_TIMESTAMP('2019-08-01 12:32:28','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tab_ID=200096
@@ -71,9 +73,8 @@ INSERT INTO AD_TableIndex (AD_Client_ID,AD_Org_ID,AD_TableIndex_ID,AD_TableIndex
 INSERT INTO AD_IndexColumn (AD_Client_ID,AD_Org_ID,AD_IndexColumn_ID,AD_IndexColumn_UU,Created,CreatedBy,EntityType,IsActive,Updated,UpdatedBy,AD_TableIndex_ID,ColumnSQL,SeqNo) VALUES (0,0,201389,'a163915d-a5ba-45f9-9411-144d499af1fd',TO_TIMESTAMP('2019-08-01 12:33:35','YYYY-MM-DD HH24:MI:SS'),100,'D','Y',TO_TIMESTAMP('2019-08-01 12:33:35','YYYY-MM-DD HH24:MI:SS'),100,201074,'UPPER(Name)',1)
 ;
 
--- Aug 1, 2019, 12:33:43 PM CEST
-CREATE UNIQUE INDEX ad_tableindex_name ON AD_TableIndex (UPPER(Name))
-;
+-- Aug 1, 2019, 12:33:43 PM CES
+--CREATE UNIQUE INDEX ad_tableindex_name ON AD_TableIndex (UPPER(Name));
 
 SELECT register_migration_script('201908011127_IDEMPIERE-4017.sql') FROM dual
 ;

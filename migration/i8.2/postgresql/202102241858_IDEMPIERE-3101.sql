@@ -1,3 +1,4 @@
+-- ALTER ERROR line 1149
 -- IDEMPIERE-3101 implement OAuth2 for mail (gmail, outlook and other mail system)
 -- Feb 17, 2021, 10:08:15 PM CET
 INSERT INTO AD_Menu (AD_Menu_ID,Name,AD_Client_ID,AD_Org_ID,IsActive,Created,CreatedBy,Updated,UpdatedBy,IsSummary,IsSOTrx,IsReadOnly,EntityType,IsCentrallyMaintained,AD_Menu_UU) VALUES (200178,'External Authorization',0,0,'Y',TO_TIMESTAMP('2021-02-17 22:08:14','YYYY-MM-DD HH24:MI:SS'),100,TO_TIMESTAMP('2021-02-17 22:08:14','YYYY-MM-DD HH24:MI:SS'),100,'Y','Y','N','D','N','d08e9cc5-6835-4788-960c-a0dbe0d96b9a')

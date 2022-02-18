@@ -1,3 +1,4 @@
+-- ALTER ERROR line 359, 550
 -- IDEMPIERE-3981 - Lookup tab & field level control options, Lookup Dynamic validation and overwrite Lookup Dynamic validation & isselection at field level
 -- Jun 3, 2019 10:05:06 BRT
 INSERT INTO AD_Element (AD_Element_ID,AD_Client_ID,AD_Org_ID,IsActive,Created,CreatedBy,Updated,UpdatedBy,ColumnName,Name,PrintName,EntityType,AD_Element_UU) VALUES (203338,0,0,'Y',TO_TIMESTAMP('2019-06-03 10:05:05','YYYY-MM-DD HH24:MI:SS'),100,TO_TIMESTAMP('2019-06-03 10:05:05','YYYY-MM-DD HH24:MI:SS'),100,'IsAllowAdvancedLookup','Allow Advanced Lookup','Allow Advanced Lookup','D','f410a3ed-f6f5-4c16-9a02-a50f91d60dbc')

@@ -1,3 +1,4 @@
+-- ALTER error line 25
 -- IDEMPIERE-4398 Database inconsistency with dictionary for types CHAR
 -- Aug 6, 2020, 6:04:11 PM CEST
 INSERT INTO t_alter_column values('ad_orginfo','DUNS','VARCHAR(11)',null,null)

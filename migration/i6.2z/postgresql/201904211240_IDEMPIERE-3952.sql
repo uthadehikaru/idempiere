@@ -1,3 +1,4 @@
+-- ALTER ERROR line 20
 UPDATE AD_ZoomCondition SET EntityType='D' WHERE AD_ZoomCondition_ID<1000000 AND EntityType IS NULL;
 UPDATE AD_Style SET EntityType='D' WHERE AD_Style_ID<1000000 AND EntityType IS NULL;
 UPDATE AD_StyleLine SET EntityType='D' WHERE AD_StyleLine_ID<1000000 AND EntityType IS NULL;

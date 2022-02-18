@@ -1,3 +1,4 @@
+-- ALTER ERROR line 83
 -- IDEMPIERE-3639 Placeholders for every fields
 -- Feb 15, 2018 8:42:55 AM CET
 INSERT INTO AD_Element (AD_Element_ID,AD_Client_ID,AD_Org_ID,IsActive,Created,CreatedBy,Updated,UpdatedBy,ColumnName,Name,PrintName,EntityType,AD_Element_UU) VALUES (203163,0,0,'Y',TO_TIMESTAMP('2018-02-15 08:42:54','YYYY-MM-DD HH24:MI:SS'),100,TO_TIMESTAMP('2018-02-15 08:42:54','YYYY-MM-DD HH24:MI:SS'),100,'Placeholder','Placeholder','Placeholder','D','dce47a52-1044-4ee0-aad3-31ae2325d1ec')

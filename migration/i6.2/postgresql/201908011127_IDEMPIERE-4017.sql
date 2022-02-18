@@ -41,8 +41,8 @@ DROP INDEX ad_column_name
 ;
 
 -- Aug 1, 2019, 11:59:04 AM CEST
--- delete from ad_field where ad_column_id=1099220;
--- update ad_column set columnname='sustainablematerialcomp' where ad_column_id=1099220;
+delete from ad_field where ad_column_id=1099220;
+update ad_column set columnname='sustainablematerialcomp' where ad_column_id=1099220;
 CREATE UNIQUE INDEX ad_column_name ON AD_Column (AD_Table_ID,UPPER(ColumnName))
 ;
 

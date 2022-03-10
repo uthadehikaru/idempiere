@@ -6,7 +6,6 @@ ALTER TABLE AD_Package_Imp_Detail ADD CONSTRAINT ADTable_ADPackageImpDetail FORE
 
 ALTER TABLE AD_Password_History ADD CONSTRAINT ADUser_ADPasswordHistory FOREIGN KEY (AD_User_ID) REFERENCES AD_User DEFERRABLE INITIALLY DEFERRED;
 
+*/
 SELECT register_migration_script('201610291223_NewFKs.sql') FROM dual
 ;
-
-*/

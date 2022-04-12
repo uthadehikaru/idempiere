@@ -115,6 +115,7 @@ public class WCreateFromWindow extends Window implements EventListener<Event>, W
 
 		southPanel.appendChild(new Separator());
 		southPanel.appendChild(statusBar);
+		southPanel.setHeight("70px");
 		
 		if (!ThemeManager.isUseCSSForWindowSize())
 		{

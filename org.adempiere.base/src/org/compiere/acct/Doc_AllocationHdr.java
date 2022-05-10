@@ -1112,6 +1112,11 @@ public class Doc_AllocationHdr extends Doc
 						invoiceAccounted = (BigDecimal) valuesInv.get(1); // AmtAcctDr
 					}
 				}
+				if(invoiceSource==null)
+					invoiceSource = Env.ZERO;
+				if(invoiceAccounted==null)
+					invoiceAccounted = Env.ZERO;
+				
 				htInvSource.put(invoice.getC_Invoice_ID(), invoiceSource);
 				htInvAccounted.put(invoice.getC_Invoice_ID(), invoiceAccounted);
 			}

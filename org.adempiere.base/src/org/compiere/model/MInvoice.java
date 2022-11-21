@@ -451,7 +451,7 @@ public class MInvoice extends X_C_Invoice implements DocAction, IDocsPostProcess
 	private BigDecimal 		m_openAmt = null;
 
 	/**	Invoice Lines			*/
-	private MInvoiceLine[]	m_lines;
+	protected MInvoiceLine[]	m_lines;
 	/**	Invoice Taxes			*/
 	private MInvoiceTax[]	m_taxes;
 	/**	Logger			*/
@@ -1517,7 +1517,7 @@ public class MInvoice extends X_C_Invoice implements DocAction, IDocsPostProcess
 	/**	Process Message 			*/
 	private String		m_processMsg = null;
 	/**	Just Prepared Flag			*/
-	private boolean		m_justPrepared = false;
+	protected boolean		m_justPrepared = false;
 
 	/**
 	 * 	Unlock Document.
@@ -2249,7 +2249,7 @@ public class MInvoice extends X_C_Invoice implements DocAction, IDocsPostProcess
 	/* Save array of documents to process AFTER completing this one */
 	ArrayList<PO> docsPostProcess = new ArrayList<PO>();
 
-	private void addDocsPostProcess(PO doc) {
+	protected void addDocsPostProcess(PO doc) {
 		docsPostProcess.add(doc);
 	}
 

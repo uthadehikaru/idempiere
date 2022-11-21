@@ -87,6 +87,96 @@ public class MAssetAddition extends X_A_Asset_Addition
 		return true;
 	}	//	beforeSave
 	
+	/*
+	 * Added by SS, Surya Sentosa, Kosta-Consulting
+	 * 
+	 */
+	/** Internal Use = USE */
+	public static final String A_SOURCETYPE_InternalUse = "USE";
+	/** Match Internal Use Line , by SS, Surya Sentosa, Kosta-Consulting*/
+	private final POCacheLocal<MInventoryLine> m_cacheInvLine = POCacheLocal.newInstance(this, MInventoryLine.class);
+	/**
+	 * @param requery
+	 * @return
+	 */
+	private MInventoryLine getInternalUse(boolean requery)
+	{
+		return m_cacheInvLine.get(requery);
+	}
+	
+	private void setInternalUse(MInventoryLine useLine)
+	{
+		useLine.load(get_TrxName());
+		setAD_Org_ID(useLine.getAD_Org_ID());
+		setPostingType(POSTINGTYPE_Actual);
+		setA_SourceType(A_SOURCETYPE_InternalUse);
+		set_ValueOfColumn("M_InventoryLine_ID", useLine.get_ID());
+		
+		if (MAssetAddition.A_CAPVSEXP_Capital.equals(useLine.get_ValueAsString("A_CapvsExp"))
+					&& useLine.get_ValueAsBoolean("A_CreateAsset")) {
+			setA_CreateAsset(true);
+		}
+		 
+		set_ValueOfColumn("M_Inventory_ID", useLine.getM_Inventory_ID());
+		setM_Product_ID(useLine.getM_Product_ID());
+		setM_AttributeSetInstance_ID(useLine.getM_AttributeSetInstance_ID());
+		setA_QTY_Current(useLine.getQtyInternalUse());
+		setLine(useLine.getLine());
+		setM_Locator_ID(useLine.getM_Locator_ID());
+		setA_CapvsExp(useLine.get_ValueAsString("A_CapvsExp"));
+		MProduct prd = new MProduct(useLine.getCtx(), useLine.getM_Product_ID(), useLine.get_TrxName());
+		BigDecimal productCost = MCost.getCurrentCost(prd, useLine.getM_AttributeSetInstance_ID(), MAcctSchema.getClientAcctSchema(getCtx(), getAD_Client_ID())[0], getAD_Org_ID(), MCost.COSTINGMETHOD_AveragePO
+								, useLine.getQtyInternalUse(), 0, true, get_TrxName());
+		setAssetAmtEntered(productCost);
+		setAssetSourceAmt(productCost);
+		setC_Currency_ID(MClient.get(useLine.getCtx()).getC_Currency_ID());
+		setDateDoc(useLine.getParent().getMovementDate());
+		setDateAcct(useLine.getParent().getMovementDate());
+		setDescription(useLine.getDescription());
+		if (useLine.get_ValueAsString("ChangeType") != null && useLine.get_ValueAsString("ChangeType") != "")
+			set_ValueOfColumn("ChangeType", useLine.get_ValueAsString("ChangeType"));
+		m_cacheInvLine.set(useLine);
+	}
+	/**
+	 * Construct addition from inventory
+	 * @param match	match invoice model
+	 */
+	private MAssetAddition (MInventoryLine useLine)
+	{
+		this(useLine.getCtx(), 0, useLine.get_TrxName());
+		setInternalUse(useLine);
+		setC_DocType_ID();
+	}
+	/**
+	 * Create Asset and asset Addition from Inventory.
+	 * MAssetAddition is saved.
+	 * @param use inventory
+	 * @return asset addition
+	 */
+	public static MAssetAddition createAsset(MInventoryLine useLine)
+	{
+		MAssetAddition assetAdd = new MAssetAddition(useLine);
+		assetAdd.dump();
+		//@win add condition to prevent asset creation when expense addition or second addition
+		if (MAssetAddition.A_CAPVSEXP_Capital.equals(assetAdd.getA_CapvsExp())
+				&& assetAdd.isA_CreateAsset()) { 
+		MAsset asset = assetAdd.createAsset();
+		assetAdd.setM_Product_ID(asset.getM_Product_ID());
+		asset.dump();
+//		MAssetGroupAcct assetgrpacct = MAssetGroupAcct.forA_Asset_Group_ID(asset.getCtx(), asset.getA_Asset_Group_ID(), assetAdd.getPostingType());
+//		assetAdd.setDeltaUseLifeYears(assetgrpacct.getUseLifeYears());
+//		assetAdd.setDeltaUseLifeYears_F(assetgrpacct.getUseLifeYears_F());
+		} else {
+			assetAdd.setA_Asset_ID(useLine.get_ValueAsInt("A_Asset_ID"));
+			assetAdd.setA_CreateAsset(false);
+		}
+		//replace product with product in asset addition
+		
+		assetAdd.saveEx();
+		return assetAdd;
+	}
+	// end added by SS, Surya Sentosa, Kosta-Consulting
+	
 	/**
 	 * Create Asset and asset Addition from MMatchInv.
 	 * MAssetAddition is saved.

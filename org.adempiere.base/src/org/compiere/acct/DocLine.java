@@ -163,7 +163,7 @@ public class DocLine
 	 * 	Set C_ConversionType_ID
 	 *	@param C_ConversionType_ID id
 	 */
-	protected void setC_ConversionType_ID(int C_ConversionType_ID)
+	public void setC_ConversionType_ID(int C_ConversionType_ID)
 	{
 		m_C_ConversionType_ID = C_ConversionType_ID;
 	}	//	setC_ConversionType_ID

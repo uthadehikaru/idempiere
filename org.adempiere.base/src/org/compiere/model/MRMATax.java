@@ -169,7 +169,7 @@ public class MRMATax extends X_M_RMATax
 	 * 	Set Precision
 	 *	@param precision The precision to set.
 	 */
-	protected void setPrecision (int precision)
+	public void setPrecision (int precision)
 	{
 		m_precision = Integer.valueOf(precision);
 	}	//	setPrecision
@@ -178,7 +178,7 @@ public class MRMATax extends X_M_RMATax
 	 * 	Get Tax (immutable)
 	 *	@return tax
 	 */
-	protected MTax getTax()
+	public MTax getTax()
 	{
 		if (m_tax == null)
 			m_tax = MTax.get(getCtx(), getC_Tax_ID());

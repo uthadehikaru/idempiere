@@ -8,8 +8,8 @@ DROP INDEX c_uom_conversion_product
 ;
 
 -- Feb 27, 2017 12:25:46 PM GMT+08:00
-CREATE UNIQUE INDEX c_uom_conversion_product ON C_UOM_Conversion (C_UOM_ID,C_UOM_To_ID,COALESCE(M_Product_ID,-1))
-;
+--CREATE UNIQUE INDEX c_uom_conversion_product ON C_UOM_Conversion (C_UOM_ID,C_UOM_To_ID,COALESCE(M_Product_ID,-1))
+--;
 
 -- Feb 27, 2017 12:29:47 PM GMT+08:00
 UPDATE AD_Field SET IsMandatory=NULL, AD_Val_Rule_ID=NULL, AD_Reference_Value_ID=NULL, IsToolbarButton=NULL,Updated=TO_TIMESTAMP('2017-02-27 12:29:47','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Field_ID=10831

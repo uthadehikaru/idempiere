@@ -12,8 +12,7 @@ UPDATE AD_IndexColumn SET ColumnSQL='TRUNC(DateAcct)',Updated=TO_TIMESTAMP('2017
 ;
 
 -- Aug 25, 2017 12:23:35 PM CEST
-DROP INDEX fact_acct_trunc_dateacct
-;
+--DROP INDEX fact_acct_trunc_dateacct;
 
 -- Aug 25, 2017 12:23:35 PM CEST
 CREATE INDEX fact_acct_trunc_dateacct ON Fact_Acct (TRUNC(DateAcct))

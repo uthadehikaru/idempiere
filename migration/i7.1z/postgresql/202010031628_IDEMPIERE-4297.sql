@@ -1,4 +1,6 @@
 -- IDEMPIERE-4297 Improve test data
+-- NOT NEED FOR AOI
+/*
 -- Oct 3, 2020, 3:53:25 PM CEST
 INSERT INTO C_AcctSchema (C_AcctSchema_ID,AD_Client_ID,AD_Org_ID,IsActive,Created,CreatedBy,Updated,UpdatedBy,Name,GAAP,IsAccrual,CostingMethod,C_Currency_ID,AutoPeriodControl,C_Period_ID,Period_OpenHistory,Period_OpenFuture,Separator,HasAlias,HasCombination,IsTradeDiscountPosted,IsDiscountCorrectsTax,M_CostType_ID,CostingLevel,IsAdjustCOGS,IsPostServices,IsExplicitCostAdjustment,CommitmentType,Processing,TaxCorrectionType,IsAllowNegativePosting,IsPostIfClearingEqual,C_AcctSchema_UU) VALUES (200000,11,0,'Y',TO_TIMESTAMP('2020-10-03 15:53:24','YYYY-MM-DD HH24:MI:SS'),100,TO_TIMESTAMP('2020-10-03 15:53:24','YYYY-MM-DD HH24:MI:SS'),100,'GardenWorld Euro','UN','Y','A',102,'Y',200104,10000,100,'-','Y','N','N','N',100,'C','N','N','N','N','N','N','Y','Y','546a277d-0ad3-4935-bf2a-7eb6d348b978')
 ;
@@ -1010,7 +1012,7 @@ UPDATE C_Invoice SET ProcessedOn=1014415465000 WHERE C_Invoice_ID=102
 
 UPDATE M_MatchPO SET ProcessedOn=1014415465500 WHERE M_MatchPO_ID IN (200002,200003)
 ;
-
+*/
 SELECT register_migration_script('202010031628_IDEMPIERE-4297.sql') FROM dual
 ;
 

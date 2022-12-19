@@ -1,4 +1,6 @@
 -- IDEMPIERE-4207 Fill Testing Asset Data
+-- NOT NEEDED for AOI
+/*
 -- Apr 9, 2020, 5:05:18 PM CEST
 INSERT INTO C_ValidCombination (C_ValidCombination_ID,AD_Client_ID,AD_Org_ID,IsActive,Created,CreatedBy,Updated,UpdatedBy,C_AcctSchema_ID,Account_ID,Combination,IsFullyQualified,Description,C_ValidCombination_UU) VALUES (200001,11,0,'Y',TO_TIMESTAMP('2020-04-09 17:05:18','YYYY-MM-DD HH24:MI:SS'),100,TO_TIMESTAMP('2020-04-09 17:05:18','YYYY-MM-DD HH24:MI:SS'),100,101,501,'*-67230-_-_-_-_','Y','*-Equipment Depreciation-_-_-_-_','37f52556-a668-47b2-bba3-1d217ca3594b')
 ;
@@ -122,6 +124,7 @@ INSERT INTO AD_TreeNodePR (AD_Client_ID,AD_Org_ID, IsActive,Created,CreatedBy,Up
 -- Apr 9, 2020, 5:05:34 PM CEST
 INSERT INTO M_Cost (AD_Client_ID,AD_Org_ID,M_Product_ID,M_CostType_ID,C_AcctSchema_ID,M_CostElement_ID,IsActive,Created,CreatedBy,Updated,UpdatedBy,CurrentCostPrice,FutureCostPrice,M_AttributeSetInstance_ID,CumulatedAmt,CumulatedQty,CurrentQty,M_Cost_UU) VALUES (11,0,200002,100,101,100,'Y',TO_TIMESTAMP('2020-04-09 17:05:34','YYYY-MM-DD HH24:MI:SS'),100,TO_TIMESTAMP('2020-04-09 17:05:34','YYYY-MM-DD HH24:MI:SS'),100,0.0,0.0,0,0.0,0.0,0.0,'b3792d32-f636-4174-a53a-e2076ebb49e6')
 ;
+*/
 
 SELECT register_migration_script('202004091706_IDEMPIERE-4207.sql') FROM dual
 ;

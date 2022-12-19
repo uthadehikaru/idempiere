@@ -8,8 +8,8 @@ INSERT INTO AD_IndexColumn (AD_Client_ID,AD_Org_ID,AD_IndexColumn_ID,AD_IndexCol
 ;
 
 -- Dec 21, 2021, 3:33:18 PM MYT
-DROP INDEX c_uom_conversion_product
-;
+-- DROP INDEX c_uom_conversion_product
+-- ;
 
 -- Dec 21, 2021, 3:33:19 PM MYT
 CREATE UNIQUE INDEX c_uom_conversion_product ON C_UOM_Conversion (C_UOM_ID,C_UOM_To_ID,AD_Client_ID,COALESCE(M_Product_ID,-1))

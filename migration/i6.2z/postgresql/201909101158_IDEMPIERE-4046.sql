@@ -88,11 +88,11 @@ INSERT INTO t_alter_column values('t_distributionrundetail','M_DistributionRunLi
 ;
 
 -- Sep 10, 2019, 11:54:19 AM CEST
---ALTER TABLE T_DistributionRunDetail DROP CONSTRAINT mdistributionrline_tdrdetail;
+ALTER TABLE T_DistributionRunDetail DROP CONSTRAINT mdistributionrline_tdrdetail;
 
 -- Sep 10, 2019, 11:54:19 AM CEST
-ALTER TABLE T_DistributionRunDetail ADD CONSTRAINT mdistributionrline_tdrdetail FOREIGN KEY (M_DistributionRunLine_ID) REFERENCES m_distributionrunline(m_distributionrunline_id) ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED
-;
+-- ALTER TABLE T_DistributionRunDetail ADD CONSTRAINT mdistributionrline_tdrdetail FOREIGN KEY (M_DistributionRunLine_ID) REFERENCES m_distributionrunline(m_distributionrunline_id) ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED
+-- ;
 
 -- Sep 10, 2019, 11:54:39 AM CEST
 UPDATE AD_Column SET FKConstraintType='C',Updated=TO_TIMESTAMP('2019-09-10 11:54:39','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Column_ID=6723
@@ -134,12 +134,12 @@ UPDATE AD_Column SET FKConstraintType='C',Updated=TO_TIMESTAMP('2019-09-10 11:54
 INSERT INTO t_alter_column values('t_inventoryvalue','M_CostElement_ID','NUMERIC(10)',null,'NULL')
 ;
 
--- Sep 10, 2019, 11:54:58 AM CEST
---ALTER TABLE T_InventoryValue DROP CONSTRAINT mcostelement_tinventoryvalue;
+Sep 10, 2019, 11:54:58 AM CEST
+ALTER TABLE T_InventoryValue DROP CONSTRAINT mcostelement_tinventoryvalue;
 
 -- Sep 10, 2019, 11:54:58 AM CEST
-ALTER TABLE T_InventoryValue ADD CONSTRAINT mcostelement_tinventoryvalue FOREIGN KEY (M_CostElement_ID) REFERENCES m_costelement(m_costelement_id) ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED
-;
+-- ALTER TABLE T_InventoryValue ADD CONSTRAINT mcostelement_tinventoryvalue FOREIGN KEY (M_CostElement_ID) REFERENCES m_costelement(m_costelement_id) ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED
+-- ;
 
 -- Sep 10, 2019, 11:55:06 AM CEST
 UPDATE AD_Column SET FKConstraintType='C',Updated=TO_TIMESTAMP('2019-09-10 11:55:06','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Column_ID=6721
@@ -150,11 +150,11 @@ INSERT INTO t_alter_column values('t_inventoryvalue','M_PriceList_Version_ID','N
 ;
 
 -- Sep 10, 2019, 11:55:07 AM CEST
---ALTER TABLE T_InventoryValue DROP CONSTRAINT mplversion_tinventoryvalue;
+ALTER TABLE T_InventoryValue DROP CONSTRAINT mplversion_tinventoryvalue;
 
 -- Sep 10, 2019, 11:55:07 AM CEST
-ALTER TABLE T_InventoryValue ADD CONSTRAINT mplversion_tinventoryvalue FOREIGN KEY (M_PriceList_Version_ID) REFERENCES m_pricelist_version(m_pricelist_version_id) ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED
-;
+-- ALTER TABLE T_InventoryValue ADD CONSTRAINT mplversion_tinventoryvalue FOREIGN KEY (M_PriceList_Version_ID) REFERENCES m_pricelist_version(m_pricelist_version_id) ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED
+-- ;
 
 -- Sep 10, 2019, 11:55:30 AM CEST
 UPDATE AD_Column SET FKConstraintType='C',Updated=TO_TIMESTAMP('2019-09-10 11:55:30','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Column_ID=14076
@@ -216,8 +216,8 @@ INSERT INTO t_alter_column values('t_replenish','M_WarehouseSource_ID','NUMERIC(
 --ALTER TABLE T_Replenish DROP CONSTRAINT mwarehousesource_treplenish;
 
 -- Sep 10, 2019, 11:56:08 AM CEST
-ALTER TABLE T_Replenish ADD CONSTRAINT mwarehousesource_treplenish FOREIGN KEY (M_WarehouseSource_ID) REFERENCES m_warehouse(m_warehouse_id) ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED
-;
+-- ALTER TABLE T_Replenish ADD CONSTRAINT mwarehousesource_treplenish FOREIGN KEY (M_WarehouseSource_ID) REFERENCES m_warehouse(m_warehouse_id) ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED
+-- ;
 
 -- Sep 10, 2019, 11:56:26 AM CEST
 UPDATE AD_Column SET FKConstraintType='C',Updated=TO_TIMESTAMP('2019-09-10 11:56:26','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Column_ID=8191
@@ -276,11 +276,11 @@ INSERT INTO t_alter_column values('t_transaction','M_InOutLine_ID','NUMERIC(10)'
 ;
 
 -- Sep 10, 2019, 11:57:07 AM CEST
---ALTER TABLE T_Transaction DROP CONSTRAINT minoutline_ttransaction;
+ALTER TABLE T_Transaction DROP CONSTRAINT minoutline_ttransaction;
 
 -- Sep 10, 2019, 11:57:07 AM CEST
-ALTER TABLE T_Transaction ADD CONSTRAINT minoutline_ttransaction FOREIGN KEY (M_InOutLine_ID) REFERENCES m_inoutline(m_inoutline_id) ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED
-;
+-- ALTER TABLE T_Transaction ADD CONSTRAINT minoutline_ttransaction FOREIGN KEY (M_InOutLine_ID) REFERENCES m_inoutline(m_inoutline_id) ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED
+-- ;
 
 -- Sep 10, 2019, 11:57:15 AM CEST
 UPDATE AD_Column SET FKConstraintType='C',Updated=TO_TIMESTAMP('2019-09-10 11:57:15','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Column_ID=13256
@@ -291,11 +291,11 @@ INSERT INTO t_alter_column values('t_transaction','M_InventoryLine_ID','NUMERIC(
 ;
 
 -- Sep 10, 2019, 11:57:16 AM CEST
---ALTER TABLE T_Transaction DROP CONSTRAINT minventoryline_ttransaction;
+ALTER TABLE T_Transaction DROP CONSTRAINT minventoryline_ttransaction;
 
 -- Sep 10, 2019, 11:57:16 AM CEST
-ALTER TABLE T_Transaction ADD CONSTRAINT minventoryline_ttransaction FOREIGN KEY (M_InventoryLine_ID) REFERENCES m_inventoryline(m_inventoryline_id) ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED
-;
+-- ALTER TABLE T_Transaction ADD CONSTRAINT minventoryline_ttransaction FOREIGN KEY (M_InventoryLine_ID) REFERENCES m_inventoryline(m_inventoryline_id) ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED
+-- ;
 
 -- Sep 10, 2019, 11:57:23 AM CEST
 UPDATE AD_Column SET FKConstraintType='C',Updated=TO_TIMESTAMP('2019-09-10 11:57:23','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Column_ID=13268
@@ -306,11 +306,11 @@ INSERT INTO t_alter_column values('t_transaction','M_Locator_ID','NUMERIC(10)',n
 ;
 
 -- Sep 10, 2019, 11:57:24 AM CEST
---ALTER TABLE T_Transaction DROP CONSTRAINT mlocator_ttransaction;
+ALTER TABLE T_Transaction DROP CONSTRAINT mlocator_ttransaction;
 
 -- Sep 10, 2019, 11:57:24 AM CEST
-ALTER TABLE T_Transaction ADD CONSTRAINT mlocator_ttransaction FOREIGN KEY (M_Locator_ID) REFERENCES m_locator(m_locator_id) ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED
-;
+-- ALTER TABLE T_Transaction ADD CONSTRAINT mlocator_ttransaction FOREIGN KEY (M_Locator_ID) REFERENCES m_locator(m_locator_id) ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED
+-- ;
 
 -- Sep 10, 2019, 11:57:32 AM CEST
 UPDATE AD_Column SET FKConstraintType='C',Updated=TO_TIMESTAMP('2019-09-10 11:57:32','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Column_ID=13254
@@ -321,11 +321,11 @@ INSERT INTO t_alter_column values('t_transaction','M_MovementLine_ID','NUMERIC(1
 ;
 
 -- Sep 10, 2019, 11:57:33 AM CEST
---ALTER TABLE T_Transaction DROP CONSTRAINT mmovementline_ttransaction;
+ALTER TABLE T_Transaction DROP CONSTRAINT mmovementline_ttransaction;
 
 -- Sep 10, 2019, 11:57:33 AM CEST
-ALTER TABLE T_Transaction ADD CONSTRAINT mmovementline_ttransaction FOREIGN KEY (M_MovementLine_ID) REFERENCES m_movementline(m_movementline_id) ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED
-;
+-- ALTER TABLE T_Transaction ADD CONSTRAINT mmovementline_ttransaction FOREIGN KEY (M_MovementLine_ID) REFERENCES m_movementline(m_movementline_id) ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED
+-- ;
 
 -- Sep 10, 2019, 11:57:41 AM CEST
 UPDATE AD_Column SET FKConstraintType='C',Updated=TO_TIMESTAMP('2019-09-10 11:57:41','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Column_ID=13269
@@ -336,11 +336,11 @@ INSERT INTO t_alter_column values('t_transaction','M_Product_ID','NUMERIC(10)',n
 ;
 
 -- Sep 10, 2019, 11:57:43 AM CEST
---ALTER TABLE T_Transaction DROP CONSTRAINT mproduct_ttransaction;
+ALTER TABLE T_Transaction DROP CONSTRAINT mproduct_ttransaction;
 
 -- Sep 10, 2019, 11:57:43 AM CEST
-ALTER TABLE T_Transaction ADD CONSTRAINT mproduct_ttransaction FOREIGN KEY (M_Product_ID) REFERENCES m_product(m_product_id) ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED
-;
+-- ALTER TABLE T_Transaction ADD CONSTRAINT mproduct_ttransaction FOREIGN KEY (M_Product_ID) REFERENCES m_product(m_product_id) ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED
+-- ;
 
 -- Sep 10, 2019, 11:57:50 AM CEST
 UPDATE AD_Column SET FKConstraintType='C',Updated=TO_TIMESTAMP('2019-09-10 11:57:50','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Column_ID=13368
@@ -351,11 +351,11 @@ INSERT INTO t_alter_column values('t_transaction','M_ProductionLine_ID','NUMERIC
 ;
 
 -- Sep 10, 2019, 11:57:51 AM CEST
---ALTER TABLE T_Transaction DROP CONSTRAINT mproductionline_ttransaction;
+ALTER TABLE T_Transaction DROP CONSTRAINT mproductionline_ttransaction;
 
 -- Sep 10, 2019, 11:57:51 AM CEST
-ALTER TABLE T_Transaction ADD CONSTRAINT mproductionline_ttransaction FOREIGN KEY (M_ProductionLine_ID) REFERENCES m_productionline(m_productionline_id) ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED
-;
+-- ALTER TABLE T_Transaction ADD CONSTRAINT mproductionline_ttransaction FOREIGN KEY (M_ProductionLine_ID) REFERENCES m_productionline(m_productionline_id) ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED
+-- ;
 
 SELECT register_migration_script('201909101158_IDEMPIERE-4046.sql') FROM dual
 ;

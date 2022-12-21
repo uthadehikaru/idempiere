@@ -2,8 +2,8 @@ begin;
 
 -- IDEMPIERE-4474 Automatic calculation of freight charges
 -- Sep 25, 2020, 1:14:14 PM CEST
-INSERT INTO AD_Element (AD_Element_ID,AD_Client_ID,AD_Org_ID,IsActive,Created,CreatedBy,Updated,UpdatedBy,ColumnName,Name,Description,Help,PrintName,EntityType,AD_Element_UU) VALUES (203440,0,0,'Y',TO_TIMESTAMP('2020-09-25 13:13:58','YYYY-MM-DD HH24:MI:SS'),100,TO_TIMESTAMP('2020-09-25 13:13:58','YYYY-MM-DD HH24:MI:SS'),100,'MaxWeight','Max Weight',NULL,NULL,'Max Weight','D','cb6c78ea-eff8-431e-a693-212a8ae1bec9')
-;
+-- INSERT INTO AD_Element (AD_Element_ID,AD_Client_ID,AD_Org_ID,IsActive,Created,CreatedBy,Updated,UpdatedBy,ColumnName,Name,Description,Help,PrintName,EntityType,AD_Element_UU) VALUES (203440,0,0,'Y',TO_TIMESTAMP('2020-09-25 13:13:58','YYYY-MM-DD HH24:MI:SS'),100,TO_TIMESTAMP('2020-09-25 13:13:58','YYYY-MM-DD HH24:MI:SS'),100,'MaxWeight','Max Weight',NULL,NULL,'Max Weight','D','cb6c78ea-eff8-431e-a693-212a8ae1bec9')
+-- ;
 
 -- Sep 25, 2020, 1:15:20 PM CEST
 INSERT INTO AD_Column (AD_Column_ID,Version,Name,AD_Table_ID,ColumnName,FieldLength,IsKey,IsParent,IsMandatory,IsTranslated,IsIdentifier,SeqNo,IsEncrypted,AD_Reference_ID,AD_Client_ID,AD_Org_ID,IsActive,Created,CreatedBy,Updated,UpdatedBy,AD_Element_ID,IsUpdateable,IsSelectionColumn,EntityType,IsSyncDatabase,IsAlwaysUpdateable,IsAutocomplete,IsAllowLogging,AD_Column_UU,IsAllowCopy,SeqNoSelection,IsToolbarButton,IsSecure,FKConstraintType,IsHtml) VALUES (214319,0,'Max Weight',596,'MaxWeight',22,'N','N','N','N','N',0,'N',12,0,0,'Y',TO_TIMESTAMP('2020-09-25 13:15:19','YYYY-MM-DD HH24:MI:SS'),100,TO_TIMESTAMP('2020-09-25 13:15:19','YYYY-MM-DD HH24:MI:SS'),100,203440,'Y','N','D','N','N','N','Y','f2efc63c-3424-4872-9f0f-1ca4166b3e5e','Y',0,'N','N','N','N')
@@ -182,8 +182,8 @@ UPDATE M_Shipper SET M_ShipperCfg_ID=200000, Updated=TO_TIMESTAMP('2020-09-25 13
 ;
 
 -- Sep 25, 2020, 1:56:24 PM CEST
---INSERT INTO M_ShippingProcessor (AD_Client_ID,AD_Org_ID,Created,CreatedBy,IsActive,M_ShippingProcessor_ID,M_ShippingProcessor_UU,Updated,UpdatedBy,ConnectionPassword,UserID,M_ShippingProcessorCfg_ID,Name) VALUES (11,0,TO_TIMESTAMP('2020-09-25 13:56:23','YYYY-MM-DD HH24:MI:SS'),100,'Y',200000,'99a1cb04-2aa7-4a89-b051-2bbdc0f5943f',TO_TIMESTAMP('2020-09-25 13:56:23','YYYY-MM-DD HH24:MI:SS'),100,'n/r','n/r',200000,'Freight Table Shipment Processor')
---;
+INSERT INTO M_ShippingProcessor (AD_Client_ID,AD_Org_ID,Created,CreatedBy,IsActive,M_ShippingProcessor_ID,M_ShippingProcessor_UU,Updated,UpdatedBy,ConnectionPassword,UserID,M_ShippingProcessorCfg_ID,Name) VALUES (11,0,TO_TIMESTAMP('2020-09-25 13:56:23','YYYY-MM-DD HH24:MI:SS'),100,'Y',200000,'99a1cb04-2aa7-4a89-b051-2bbdc0f5943f',TO_TIMESTAMP('2020-09-25 13:56:23','YYYY-MM-DD HH24:MI:SS'),100,'n/r','n/r',200000,'Freight Table Shipment Processor')
+;
 
 -- Sep 25, 2020, 1:56:33 PM CEST
 UPDATE M_Shipper SET M_ShippingProcessor_ID=200000,Updated=TO_TIMESTAMP('2020-09-25 13:56:33','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE M_Shipper_ID=100

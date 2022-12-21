@@ -1,7 +1,7 @@
 -- IDEMPIERE-2020 (5) Value Format for ZK
 -- Feb 25, 2015 6:00:15 PM COT
-ALTER TABLE AD_Field ADD COLUMN VFormat VARCHAR(255) DEFAULT NULL 
-;
+-- ALTER TABLE AD_Field ADD COLUMN VFormat VARCHAR(255) DEFAULT NULL 
+-- ;
 
 -- Feb 25, 2015 6:04:12 PM COT
 UPDATE AD_Field SET IsDisplayed='Y', SeqNo=270, XPosition=1,Updated=TO_TIMESTAMP('2015-02-25 18:04:12','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Field_ID=203499
@@ -16,22 +16,22 @@ UPDATE AD_Field SET SeqNo=290,Updated=TO_TIMESTAMP('2015-02-25 18:04:12','YYYY-M
 ;
 
 -- Feb 25, 2015 6:04:41 PM COT
-INSERT INTO AD_Field (AD_Field_ID,Name,Description,Help,AD_Tab_ID,AD_Column_ID,IsDisplayed,DisplayLength,SeqNo,IsSameLine,IsHeading,IsFieldOnly,IsEncrypted,AD_Client_ID,AD_Org_ID,IsActive,Created,CreatedBy,Updated,UpdatedBy,IsReadOnly,IsCentrallyMaintained,EntityType,AD_Field_UU,IsDisplayedGrid,SeqNoGrid,ColumnSpan) VALUES (203500,'Value Format','Format of the value; Can contain fixed format elements, Variables: "_lLoOaAcCa09"','<B>Validation elements:</B>
- 	(Space) any character
-_	Space (fixed character)
-l	any Letter a..Z NO space
-L	any Letter a..Z NO space converted to upper case
-o	any Letter a..Z or space
-O	any Letter a..Z or space converted to upper case
-a	any Letters & Digits NO space
-A	any Letters & Digits NO space converted to upper case
-c	any Letters & Digits or space
-C	any Letters & Digits or space converted to upper case
-0	Digits 0..9 NO space
-9	Digits 0..9 or space
+-- INSERT INTO AD_Field (AD_Field_ID,Name,Description,Help,AD_Tab_ID,AD_Column_ID,IsDisplayed,DisplayLength,SeqNo,IsSameLine,IsHeading,IsFieldOnly,IsEncrypted,AD_Client_ID,AD_Org_ID,IsActive,Created,CreatedBy,Updated,UpdatedBy,IsReadOnly,IsCentrallyMaintained,EntityType,AD_Field_UU,IsDisplayedGrid,SeqNoGrid,ColumnSpan) VALUES (203500,'Value Format','Format of the value; Can contain fixed format elements, Variables: "_lLoOaAcCa09"','<B>Validation elements:</B>
+--  	(Space) any character
+-- _	Space (fixed character)
+-- l	any Letter a..Z NO space
+-- L	any Letter a..Z NO space converted to upper case
+-- o	any Letter a..Z or space
+-- O	any Letter a..Z or space converted to upper case
+-- a	any Letters & Digits NO space
+-- A	any Letters & Digits NO space converted to upper case
+-- c	any Letters & Digits or space
+-- C	any Letters & Digits or space converted to upper case
+-- 0	Digits 0..9 NO space
+-- 9	Digits 0..9 or space
 
-Example of format "(000)_000-0000"',107,211839,'Y',255,410,'N','N','N','N',0,0,'Y',TO_TIMESTAMP('2015-02-25 18:04:41','YYYY-MM-DD HH24:MI:SS'),100,TO_TIMESTAMP('2015-02-25 18:04:41','YYYY-MM-DD HH24:MI:SS'),100,'N','Y','D','8eb1b299-24e3-4c1b-bbc6-5c3b92e1adf8','Y',400,5)
-;
+-- Example of format "(000)_000-0000"',107,211839,'Y',255,410,'N','N','N','N',0,0,'Y',TO_TIMESTAMP('2015-02-25 18:04:41','YYYY-MM-DD HH24:MI:SS'),100,TO_TIMESTAMP('2015-02-25 18:04:41','YYYY-MM-DD HH24:MI:SS'),100,'N','Y','D','8eb1b299-24e3-4c1b-bbc6-5c3b92e1adf8','Y',400,5)
+-- ;
 
 -- Feb 25, 2015 6:05:15 PM COT
 UPDATE AD_Field SET SeqNo=250,Updated=TO_TIMESTAMP('2015-02-25 18:05:15','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Field_ID=141

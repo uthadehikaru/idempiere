@@ -181,13 +181,13 @@ INSERT INTO M_ShipperCfg (AD_Client_ID,AD_Org_ID,Created,CreatedBy,IsActive,IsIn
 UPDATE M_Shipper SET M_ShipperCfg_ID=200000, Updated=TO_TIMESTAMP('2020-09-25 13:54:36','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE M_Shipper_ID=100
 ;
 
--- Sep 25, 2020, 1:56:24 PM CEST
-INSERT INTO M_ShippingProcessor (AD_Client_ID,AD_Org_ID,Created,CreatedBy,IsActive,M_ShippingProcessor_ID,M_ShippingProcessor_UU,Updated,UpdatedBy,ConnectionPassword,UserID,M_ShippingProcessorCfg_ID,Name) VALUES (11,0,TO_TIMESTAMP('2020-09-25 13:56:23','YYYY-MM-DD HH24:MI:SS'),100,'Y',200000,'99a1cb04-2aa7-4a89-b051-2bbdc0f5943f',TO_TIMESTAMP('2020-09-25 13:56:23','YYYY-MM-DD HH24:MI:SS'),100,'n/r','n/r',200000,'Freight Table Shipment Processor')
-;
+-- -- Sep 25, 2020, 1:56:24 PM CEST
+-- INSERT INTO M_ShippingProcessor (AD_Client_ID,AD_Org_ID,Created,CreatedBy,IsActive,M_ShippingProcessor_ID,M_ShippingProcessor_UU,Updated,UpdatedBy,ConnectionPassword,UserID,M_ShippingProcessorCfg_ID,Name) VALUES (11,0,TO_TIMESTAMP('2020-09-25 13:56:23','YYYY-MM-DD HH24:MI:SS'),100,'Y',200000,'99a1cb04-2aa7-4a89-b051-2bbdc0f5943f',TO_TIMESTAMP('2020-09-25 13:56:23','YYYY-MM-DD HH24:MI:SS'),100,'n/r','n/r',200000,'Freight Table Shipment Processor')
+-- ;
 
--- Sep 25, 2020, 1:56:33 PM CEST
-UPDATE M_Shipper SET M_ShippingProcessor_ID=200000,Updated=TO_TIMESTAMP('2020-09-25 13:56:33','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE M_Shipper_ID=100
-;
+-- -- Sep 25, 2020, 1:56:33 PM CEST
+-- UPDATE M_Shipper SET M_ShippingProcessor_ID=200000,Updated=TO_TIMESTAMP('2020-09-25 13:56:33','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE M_Shipper_ID=100
+-- ;
 
 -- Sep 25, 2020, 9:06:35 PM CEST
 INSERT INTO AD_Message (MsgType,MsgText,AD_Client_ID,AD_Org_ID,IsActive,Created,CreatedBy,Updated,UpdatedBy,AD_Message_ID,Value,EntityType,AD_Message_UU) VALUES ('E','COULD NOT FIND FREIGHT DEFINED FOR: Shipper {0} - Freight Category {1} - Date {2,date,short} - Weight {3,number,#,##0.00} - Dimension {4,number,#,##0.00} - Origin Country {5} - Destination Country {6} - Origin Region {7} - Destination Region {8}',0,0,'Y',TO_TIMESTAMP('2020-09-25 21:06:34','YYYY-MM-DD HH24:MI:SS'),100,TO_TIMESTAMP('2020-09-25 21:06:34','YYYY-MM-DD HH24:MI:SS'),100,200639,'FreightNotFound','D','03990c13-c085-4d1b-bb6f-6ff0c69ef2bc')

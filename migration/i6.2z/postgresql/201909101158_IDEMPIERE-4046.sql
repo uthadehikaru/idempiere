@@ -134,7 +134,7 @@ UPDATE AD_Column SET FKConstraintType='C',Updated=TO_TIMESTAMP('2019-09-10 11:54
 INSERT INTO t_alter_column values('t_inventoryvalue','M_CostElement_ID','NUMERIC(10)',null,'NULL')
 ;
 
-Sep 10, 2019, 11:54:58 AM CEST
+-- Sep 10, 2019, 11:54:58 AM CEST
 ALTER TABLE T_InventoryValue DROP CONSTRAINT mcostelement_tinventoryvalue;
 
 -- Sep 10, 2019, 11:54:58 AM CEST

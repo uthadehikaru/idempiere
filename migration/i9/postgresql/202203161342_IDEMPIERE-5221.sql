@@ -158,12 +158,12 @@ CREATE INDEX ad_sequence_name_ad_client_id ON AD_Sequence (UPPER(Name),AD_Client
 ;
 
 -- Mar 16, 2022, 2:00:26 PM CET
--- INSERT INTO AD_TableIndex (AD_Client_ID,AD_Org_ID,AD_TableIndex_ID,AD_TableIndex_UU,Created,CreatedBy,EntityType,IsActive,Name,Updated,UpdatedBy,AD_Table_ID,IsCreateConstraint,IsUnique,Processing,TableIndexDrop,IsKey) VALUES (0,0,201110,'f5471ac0-0cf7-4017-b47a-cd756e41acaf',TO_TIMESTAMP('2022-03-16 14:00:26','YYYY-MM-DD HH24:MI:SS'),100,'D','Y','ad_user_roles_ad_role_id',TO_TIMESTAMP('2022-03-16 14:00:26','YYYY-MM-DD HH24:MI:SS'),100,157,'N','N','N','N','N')
--- ;
+INSERT INTO AD_TableIndex (AD_Client_ID,AD_Org_ID,AD_TableIndex_ID,AD_TableIndex_UU,Created,CreatedBy,EntityType,IsActive,Name,Updated,UpdatedBy,AD_Table_ID,IsCreateConstraint,IsUnique,Processing,TableIndexDrop,IsKey) VALUES (0,0,201110,'f5471ac0-0cf7-4017-b47a-cd756e41acaf',TO_TIMESTAMP('2022-03-16 14:00:26','YYYY-MM-DD HH24:MI:SS'),100,'D','Y','ad_user_roles_ad_role_id',TO_TIMESTAMP('2022-03-16 14:00:26','YYYY-MM-DD HH24:MI:SS'),100,157,'N','N','N','N','N')
+;
 
 -- Mar 16, 2022, 2:00:31 PM CET
--- INSERT INTO AD_IndexColumn (AD_Client_ID,AD_Org_ID,AD_IndexColumn_ID,AD_IndexColumn_UU,Created,CreatedBy,EntityType,IsActive,Updated,UpdatedBy,AD_Column_ID,AD_TableIndex_ID,SeqNo) VALUES (0,0,201472,'64f5b577-9454-4ccc-91c8-0feacc00ba8a',TO_TIMESTAMP('2022-03-16 14:00:31','YYYY-MM-DD HH24:MI:SS'),100,'D','Y',TO_TIMESTAMP('2022-03-16 14:00:31','YYYY-MM-DD HH24:MI:SS'),100,542,201110,10)
--- ;
+INSERT INTO AD_IndexColumn (AD_Client_ID,AD_Org_ID,AD_IndexColumn_ID,AD_IndexColumn_UU,Created,CreatedBy,EntityType,IsActive,Updated,UpdatedBy,AD_Column_ID,AD_TableIndex_ID,SeqNo) VALUES (0,0,201472,'64f5b577-9454-4ccc-91c8-0feacc00ba8a',TO_TIMESTAMP('2022-03-16 14:00:31','YYYY-MM-DD HH24:MI:SS'),100,'D','Y',TO_TIMESTAMP('2022-03-16 14:00:31','YYYY-MM-DD HH24:MI:SS'),100,542,201110,10)
+;
 
 -- Mar 16, 2022, 2:00:32 PM CET
 INSERT INTO AD_IndexColumn (AD_Client_ID,AD_Org_ID,AD_IndexColumn_ID,AD_IndexColumn_UU,Created,CreatedBy,EntityType,IsActive,Updated,UpdatedBy,AD_TableIndex_ID,SeqNo) VALUES (0,0,201473,'53492333-d2fc-4c8a-ac9c-592b6bc9a9be',TO_TIMESTAMP('2022-03-16 14:00:32','YYYY-MM-DD HH24:MI:SS'),100,'D','Y',TO_TIMESTAMP('2022-03-16 14:00:32','YYYY-MM-DD HH24:MI:SS'),100,201110,20)

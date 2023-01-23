@@ -359,6 +359,6 @@ INSERT INTO t_alter_column values('t_transaction','M_ProductionLine_ID','NUMERIC
 --ALTER TABLE T_Transaction ADD CONSTRAINT mproductionline_ttransaction FOREIGN KEY (M_ProductionLine_ID) REFERENCES m_productionline(m_productionline_id) ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED
 --;
 
-SELECT register_migration_script('201909101158_IDEMPIERE-4046.sql') FROM dual
+SELECT register_migration_script('201909101158_IDEMPIERE-4046 after test.sql') FROM dual
 ;
 commit;

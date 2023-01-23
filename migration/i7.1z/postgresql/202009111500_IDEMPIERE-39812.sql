@@ -185,9 +185,5 @@ UPDATE AD_Field SET SeqNo=360,IsDisplayed='Y', Updated=TO_TIMESTAMP('2019-06-22 
 INSERT INTO AD_Column (AD_Column_ID,Version,Name,Description,Help,AD_Table_ID,ColumnName,FieldLength,IsKey,IsParent,IsMandatory,IsTranslated,IsIdentifier,SeqNo,IsEncrypted,AD_Reference_ID,AD_Reference_Value_ID,AD_Client_ID,AD_Org_ID,IsActive,Created,CreatedBy,Updated,UpdatedBy,AD_Element_ID,IsUpdateable,IsSelectionColumn,EntityType,IsSyncDatabase,IsAlwaysUpdateable,IsAutocomplete,IsAllowLogging,AD_Column_UU,IsAllowCopy,IsToolbarButton,IsSecure,FKConstraintType) VALUES (213963,0,'Dynamic Validation (Lookup)','Override Dynamic Validation Rule for Lookup Window','For some situations the dynamic validation rule for a Lookup window should be different from user data entry window. ',107,'AD_Val_Rule_Lookup_ID',22,'N','N','N','N','N',0,'N',18,100,0,0,'Y',TO_TIMESTAMP('2019-06-22 16:02:04','YYYY-MM-DD HH24:MI:SS'),100,TO_TIMESTAMP('2019-06-22 16:02:04','YYYY-MM-DD HH24:MI:SS'),100,203344,'Y','N','D','N','N','N','Y','3915d31e-9a86-4f6f-b717-9453a56466f2','Y','N','N','N')
 ;
 
--- Jun 22, 2019, 4:02:19 PM BRT
-UPDATE AD_Column SET FKConstraintName='ADValRuleLookup_ADField', FKConstraintType='N',Updated=TO_TIMESTAMP('2019-06-22 16:02:19','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Column_ID=213963
-;
-
 SELECT register_migration_script('202009111500_IDEMPIERE-39812.sql') FROM dual
 ;
